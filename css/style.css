@@ -15,14 +15,13 @@
     transition: 0.4s;
 }
 
-section {
+section table h1 h2 h3 h4 p {
     transition: 0s;
 }
 
 a {
     text-decoration: none;
     color: var(--main-clr);
-
 }
 
 a:hover {
@@ -240,6 +239,7 @@ section {
 /* Features Start */
 .features-div {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     font-weight: 300;
     color: var(--main-clr);
@@ -269,6 +269,7 @@ section {
 
 .p-cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -283,6 +284,8 @@ section {
 .card img {
     position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
@@ -852,7 +855,6 @@ table {
     border: 1px solid var(--second-clr);
     border-collapse: collapse;
     text-align: center;
-    overflow: visible;
 }
 
 td,
@@ -885,6 +887,7 @@ table img {
     text-align: center;
     padding: 0 20px;
 }
+
 .remove {
     font-size: 25px;
     padding: 8px 15px;
@@ -902,6 +905,7 @@ table img {
     transform: translateY(-4px);
     color: white;
 }
+
 .cart-totals-section {
     padding-top: 0;
 }
@@ -1255,3 +1259,68 @@ summary::marker {
 }
 
 /* End Checkout */
+
+/* Responsive */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+    .card {
+        width: 40%;
+    }
+
+    .products-div,
+    .team-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop,
+    .checkout-div,
+    .footer-div,
+    .big-sale,
+    .cart-totals-div {
+        flex-wrap: wrap;
+    }
+
+    .hero-div,
+    .about-div,
+    .contact-div {
+        flex-direction: column;
+    }
+
+    .hero-div>div,
+    .about-div>div,
+    .contact-div>div,
+    .shop-filter,
+    .shop-products,
+    .feature,
+    .checkout-col-1,
+    .checkout-col-2,
+    .footer-nav,
+    .footer-promo,
+    .footer-info,
+    .big-sale>div,
+    .cart-totals-div>div {
+        width: 100%;
+    }
+
+    .copyright {
+        margin-top: 80px;
+    }
+
+    .cart-totals-title {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 570px) {
+    .card {
+        width: 100%;
+    }
+
+    .products-div,
+    .team-div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
