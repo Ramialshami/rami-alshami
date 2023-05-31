@@ -191,6 +191,7 @@ section {
     display: flex;
     align-items: center;
     gap: 40px;
+    min-height: 70vh;    
 }
 
 .hero-img-div {
